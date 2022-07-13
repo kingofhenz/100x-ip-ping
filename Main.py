@@ -1,11 +1,12 @@
+from ipaddress import ip_address
 import os
+import subprocess
+import sys
 
-adress = raw_input("ip adress is: ")
-hostname = adress
-response = os.system("ping -c 1 " + hostname)
-
-
-if response == 0:
-  print (hostname + " is up!")
-else:
-  print (hostname + " is down!")
+while true:
+  ip_address = input("Enter an IP address: ")
+  response = os.system("ping -c 100 " + ip_address)
+  if response == 0:
+    print(ip_address, "is up!")
+  else:
+    print(ip_address, "is down!")
