@@ -1,6 +1,11 @@
-import socket
-host = socket.gethostname()
-ip=
-socket.gethostbyname(socket.gethostname())
-print("Host name:" + host)
-print("Local ip:" + ip)
+import os
+
+adress = input("ip adress is: ")
+hostname = 'adress'
+response = os.system("ping -c 1 " + hostname)
+
+
+if response == 0:
+  print hostname, 'is up!'
+else:
+  print hostname, 'is down!'
