@@ -1,7 +1,7 @@
 import os
 
-adress = input("ip adress is: ")
-hostname = 'adress'
+adress = raw_input("ip adress is: ")
+hostname = adress
 response = os.system("ping -c 1 " + hostname)
 
 
